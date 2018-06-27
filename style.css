@@ -1,0 +1,165 @@
+body{
+    background-color: #ccffcc;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.container{
+    width: 80vw;
+    height: 80vh;
+    padding: 03vh 10vw;
+}
+.container .header h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+.container .score{
+    padding-top: 5vh;
+    margin-bottom: 10vh;
+}
+.container .score .player, .computer{
+    background-color: #1aff8c;
+    display: inline-block;
+    font-size: 1.2em;
+}
+.container .score .player{
+    float: left;
+}
+.container .score .computer{
+    float: right;
+}
+/*Animated Board*/
+.container .main slider{
+    margin: 0 auto;
+    display: block;
+    width: 35vh;
+    height: 35vh;
+    border-radius: 35vh;
+    border: 3px solid #41ad49;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+slider > * {
+    margin: 0 auto;
+    display: block;
+    width: 35vh;
+    height: 35vh;   
+    animation: slide 12s infinite;
+    overflow: hidden;
+    position: absolute;
+}
+slide:nth-child(1) {
+    left: 0%;
+    animation-delay: 8s;
+    background-image:url('giphy.gif');
+    background-size: 12em;
+    background-position: center;
+}
+slide:nth-child(2) {
+    animation-delay: 5s;
+    background-image:url('giphy2.gif');
+    background-size: 12em;
+    background-position: center;
+}
+slide:nth-child(3) {
+    animation-delay: 2s;
+    background-image:url('giphy.gif');
+    background-size: 12em;
+    background-position: center;
+}
+slide:nth-child(4) {
+    left: 0%;
+    animation-delay: -1s;
+    background-image:url('giphy2.gif');
+    background-size: 12em;
+    background-position: center;
+}
+
+@keyframes slide{
+    0% {left: 100%; width: 100%;}
+    5% {left: 0%;}
+    25% {left: 0%;}
+    30% {left: -100%; width: 100%;}
+    30.0001% {left: -100%; width: 0%;}
+    100% {left: 100%; width: 0%;}
+}
+/*Play Button*/
+#myBtn{
+    display: block;
+    margin: 3vh auto 0 auto;
+    height: 10vh;
+    width: 40vw;
+    border: none;  
+}
+/*High Score Button*/
+#highScoreBtn{
+    display: block;
+    margin: 0.5vh auto;
+    height: 10vh;
+    width: 40vw;
+    border: none;
+}
+/* High Score */
+.overlay {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+}
+.overlay .table{
+    margin: 30vh auto;
+    width: 80vw;
+    color: #ffff;
+}
+.overlay .table caption{
+    text-align: center;
+    color: #ffff;
+    font-weight: 500;
+    font-size: 2em;
+    padding-bottom: 7vh;
+}
+.overlay .table th{
+    padding-bottom: 5vh;
+}
+.overlay .table tr{
+    text-align: center;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818183;
+    display: block;
+    transition: 0.3s;
+
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
