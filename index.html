@@ -24,10 +24,18 @@
         <slide><p>Slide 4</p></slide>
       </slider>
     </div>
-    <button id="myBtn">Play</button>
+    <button id="myBtn" onclick="openChoice()";>Play</button>
+    <div id="choiceCss">
+      <span class="choice left"><p>Rock</p></span>
+      <span class="choice right"><p>Paper</p></span>
+      <span class="choice center"><p>Scissors</p></span>
+      <span class="choice left"><p>Lizard</p></span>
+      <span class="choice right"><p>Spock</p></span>
+      <div class="closebtn" onclick="closeChoice()">&times;</div>
+    </div>
     <button id="highScoreBtn" onclick="openNav()";>High Score</button>
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:" class="closebtn" onclick="closeNav()">&times;</a>
         <table class="table">
             <caption>High Score</caption>
             <tr>

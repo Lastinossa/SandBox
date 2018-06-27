@@ -15,6 +15,7 @@ body{
     text-align: center;
     font-size: 1.5em;
 }
+/*Score*/
 .container .score{
     padding-top: 5vh;
     margin-bottom: 10vh;
@@ -95,6 +96,21 @@ slide:nth-child(4) {
     width: 40vw;
     border: none;  
 }
+/*Game choice overlay*/
+#choiceCss{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0vw;
+    padding-top: 10vh;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.93);
+    overflow-x: hidden;
+    transition: 0.6s;
+    height: 100vh;
+    width: 100vw;
+
+}
 /*High Score Button*/
 #highScoreBtn{
     display: block;
@@ -102,6 +118,60 @@ slide:nth-child(4) {
     height: 10vh;
     width: 40vw;
     border: none;
+}
+.choice{
+    width: 47vw;
+    height: 25vh;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.choice.left{
+    float: left;
+    margin-left: 2.5vw;
+}
+.choice.center{
+    float: none;
+    width: 94.5vw;;
+    margin: 0 2.5vw;
+
+}
+.choice.right{
+    float: right;
+    margin-right: 2.5vw;
+
+}
+.choice p{
+    margin-top: 8vh;
+    font-size: 2em;
+}
+.choice:hover,
+.choice:active,
+.choice:focus{
+    background-color: rgb(255,255,255, 0.9);
+    color: black;
+    font-size: 1.1em;
+    transition: 0.4s;
+    margin-top: -0.1vh;
+}
+#choiceCss .closebtn{
+    position: absolute;
+    bottom: 20vw;
+    right: 45vw;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+#choiceCss .closebtn:hover,
+#choiceCss .closebtn:focus{
+    right: 44vw;
+    bottom: 18.6vw;
+    font-size: 3.5em;
+    color: coral;
+    transition: 0.3s;
 }
 /* High Score */
 .overlay {
